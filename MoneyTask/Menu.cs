@@ -1,7 +1,4 @@
-﻿using System.Numerics;
-using System.Reflection;
-
-namespace MainProgram.MoneyTask;
+﻿namespace MainProgram.MoneyTask;
 
 class Menu
 {
