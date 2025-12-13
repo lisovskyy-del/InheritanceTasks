@@ -1,18 +1,20 @@
-﻿namespace MainProgram;
+﻿namespace MainProgram.WorkerTask;
 
-class Program
+class Menu
 {
-    static void Main(string[] args)
+    public static void Run()
     {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        President president = new();
+        Security security = new();
+        Manager manager = new();
+        Engineer engineer = new();
 
         while (true)
         {
-            Console.WriteLine("\nChoose task: \n");
-            Console.WriteLine("1. Money");
-            Console.WriteLine("2. Device");
-            Console.WriteLine("3. Musical Instrument");
-            Console.WriteLine("4. Workers");
+            Console.WriteLine("\n1. Show info about President");
+            Console.WriteLine("2. Show info about security");
+            Console.WriteLine("3. Show info about manager");
+            Console.WriteLine("4. show info about engineer");
             Console.WriteLine("0. Exit");
             Console.Write("Your choice: ");
             string? input = Console.ReadLine();
@@ -21,28 +23,28 @@ class Program
             {
                 if (userChoice == 0)
                 {
-                    Console.WriteLine("\nExitting...");
-                    return;
+                    Console.WriteLine("\nExitting..");
+                    break;
                 }
                 else if (userChoice == 1)
                 {
-                    MoneyTask.Menu.Run();
+                    president.Print();
                 }
                 else if (userChoice == 2)
                 {
-                    DeviceTask.Menu.Run();
+                    security.Print();
                 }
                 else if (userChoice == 3)
                 {
-                    InstrumentTask.Menu.Run();
+                    manager.Print();
                 }
                 else if (userChoice == 4)
                 {
-                    WorkerTask.Menu.Run();
+                    engineer.Print();
                 }
                 else
                 {
-                    Console.WriteLine("\nInvalid choice! Enter a number between 0-6!");
+                    Console.WriteLine("\nInvalid choice! Enter a number between 0-4!");
                 }
             }
             else
