@@ -4,8 +4,8 @@ namespace MainProgram.DeviceTask;
 
 class Device
 {
-    protected string Name { get; set; }
-    protected string Description { get; set; }
+    protected string Name { get;}
+    protected string Description { get;}
 
     public Device(string name, string description)
     {
@@ -15,17 +15,17 @@ class Device
 
     public virtual void Sound()
     {
-        Console.WriteLine("The device makes a sound.");
+        Console.WriteLine($"Device makes a sound.");
     }
 
     public void Show()
     {
-        Console.WriteLine($"Device name: {Name}");
+        Console.WriteLine($"Device's name: {Name}");
     }
 
     public virtual void Desc()
     {
-        Console.WriteLine($"Device Description: {Description}");
+        Console.WriteLine($"Device's Description: {Description}");
     }
 }
 
@@ -36,12 +36,12 @@ class Kettle : Device
 
     public override void Sound()
     {
-        Console.WriteLine($"{Name}: *whistles*");
+        Console.WriteLine($"Kettle: *whistles*");
     }
 
     public override void Desc()
     {
-        Console.WriteLine($"{Name} description: {Description}");
+        Console.WriteLine($"Kettle's description: {Description}");
     }
 }
 
@@ -52,12 +52,12 @@ class Microwave : Device
 
     public override void Sound()
     {
-        Console.WriteLine($"{Name}: *beep beep*");
+        Console.WriteLine($"Microwave: *beep beep*");
     }
 
     public override void Desc()
     {
-        Console.WriteLine($"{Name} description: {Description}");
+        Console.WriteLine($"Microwave's description: {Description}");
     }
 }
 
@@ -68,12 +68,12 @@ class Car : Device
 
     public override void Sound()
     {
-        Console.WriteLine($"{Name}: *vroom vroom*");
+        Console.WriteLine($"Car: *vroom vroom*");
     }
 
     public override void Desc()
     {
-        Console.WriteLine($"{Name} description: {Description}");
+        Console.WriteLine($"Car's description: {Description}");
     }
 }
 
@@ -84,11 +84,11 @@ class Streamship : Device
 
     public override void Sound()
     {
-        Console.WriteLine($"{Name}: *horn blows*");
+        Console.WriteLine($"Streamship: *horn blows*");
     }
 
     public override void Desc()
     {
-        Console.WriteLine($"{Name} description: {Description}");
+        Console.WriteLine($"Streamship's description: {Description}");
     }
 }

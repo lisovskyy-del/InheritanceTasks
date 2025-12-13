@@ -11,6 +11,7 @@ class Program
             Console.WriteLine("\nChoose task: \n");
             Console.WriteLine("1. Money");
             Console.WriteLine("2. Device");
+            Console.WriteLine("3. Musical Instrument");
             Console.WriteLine("0. Exit");
             Console.Write("Your choice: ");
             string? input = Console.ReadLine();
@@ -29,6 +30,10 @@ class Program
                 else if (userChoice == 2)
                 {
                     DeviceTask.Menu.Run();
+                }
+                else if (userChoice == 3)
+                {
+                    InstrumentTask.Menu.Run();
                 }
                 else
                 {

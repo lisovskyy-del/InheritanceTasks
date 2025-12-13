@@ -16,6 +16,13 @@ class Menu
         }
     }
 
+    static Device DeviceInput()
+    {
+        string name = StringInput("\nEnter device's name: ");
+        string description = StringInput("\nEnter device's description: ");
+        return new Device(name, description);
+    }
+
     static Kettle KettleInput()
     {
         string name = StringInput("\nEnter kettle's name: ");
@@ -46,6 +53,7 @@ class Menu
 
     public static void Run()
     {
+        Device? device = null;
         Kettle? kettle = null;
         Microwave? microwave = null;
         Car? car = null;
@@ -54,6 +62,10 @@ class Menu
         while (true)
         {
             Console.WriteLine("\n1. Create a device");
+            Console.WriteLine("2. Create a kettle");
+            Console.WriteLine("3. Create a microwave");
+            Console.WriteLine("4. Create a car");
+            Console.WriteLine("5. Create a streamship");
             Console.WriteLine("0. Exit");
             Console.Write("Your choice: ");
             string? input = Console.ReadLine();
@@ -67,83 +79,67 @@ class Menu
                 }
                 else if (userChoice == 1)
                 {
-                    Console.WriteLine("\n1. Create a kettle");
-                    Console.WriteLine("2. Create a microwave");
-                    Console.WriteLine("3. Create a car");
-                    Console.WriteLine("4. Create a streamship");
-                    Console.WriteLine("0. Exit");
-                    Console.Write("Your choice: ");
-                    string? deviceInput = Console.ReadLine();
+                    device = DeviceInput();
 
-                    if (int.TryParse(deviceInput, out int deviceChoice))
+                    if (device != null)
                     {
-                        if (deviceChoice == 0)
-                        {
-                            Console.WriteLine("\nExitting...");
-                            continue;
-                        }
-                        else if (deviceChoice == 1)
-                        {
-                            kettle = KettleInput();
-                            
-                            if (kettle != null)
-                            {
-                                kettle.Show();
-                                kettle.Sound();
-                                kettle.Desc();
-                            }
-                        }
-                        else if (deviceChoice == 2)
-                        {
-                            microwave = MicrowaveInput();
-
-                            if (microwave != null)
-                            {
-                                microwave.Show();
-                                microwave.Sound();
-                                microwave.Desc();
-                            }
-                        }
-                        else if (deviceChoice == 3)
-                        {
-                            car = CarInput();
-                            
-                            if (car != null)
-                            {
-                                car.Show();
-                                car.Sound();
-                                car.Desc();
-                            }
-                        }
-                        else if (deviceChoice == 4)
-                        {
-                            streamship = StreamshipInput();
-
-                            if (streamship != null)
-                            {
-                                streamship.Show();
-                                streamship.Sound();
-                                streamship.Desc();
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("\nInvalid choice! Enter a number between 0-4!");
-                        }
+                        device.Show();
+                        device.Sound();
+                        device.Desc();
                     }
-                    else
+                }
+                else if (userChoice == 2)
+                {
+                    kettle = KettleInput();
+
+                    if (kettle != null)
                     {
-                        Console.WriteLine("\nInvalid input! Enter a number!!");
+                        kettle.Show();
+                        kettle.Sound();
+                        kettle.Desc();
+                    }
+                }
+                else if (userChoice == 3)
+                {
+                    microwave = MicrowaveInput();
+
+                    if (microwave != null)
+                    {
+                        microwave.Show();
+                        microwave.Sound();
+                        microwave.Desc();
+                    }
+                }
+                else if (userChoice == 4)
+                {
+                    car = CarInput();
+
+                    if (car != null)
+                    {
+                        car.Show();
+                        car.Sound();
+                        car.Desc();
+                    }
+                }
+                else if (userChoice == 5)
+                {
+                    streamship = StreamshipInput();
+
+                    if (streamship != null)
+                    {
+                        streamship.Show();
+                        streamship.Sound();
+                        streamship.Desc();
                     }
                 }
                 else
                 {
-                    Console.WriteLine("\nInvalid choice! Enter a number between 0-1!");
+                    Console.WriteLine("\nInvalid choice! Enter a number between 0-5!");
                 }
             }
             else
             {
-                Console.WriteLine("\nInvalid input! Enter a number!!");
+                Console.WriteLine("\nInvalid input! Enter a number!");
             }
         }
     }
