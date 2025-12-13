@@ -12,3 +12,4 @@ C:\Users\manin\source\repos\InheritanceTasks\MainProgram\obj\Debug\net10.0\refin
 C:\Users\manin\source\repos\InheritanceTasks\MainProgram\obj\Debug\net10.0\MainProgram.pdb
 C:\Users\manin\source\repos\InheritanceTasks\MainProgram\obj\Debug\net10.0\MainProgram.genruntimeconfig.cache
 C:\Users\manin\source\repos\InheritanceTasks\MainProgram\obj\Debug\net10.0\ref\MainProgram.dll
+C:\Users\manin\source\repos\InheritanceTasks\MainProgram\obj\Debug\net10.0\MainProgram.sourcelink.json

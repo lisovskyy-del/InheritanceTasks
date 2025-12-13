@@ -5,12 +5,12 @@ namespace MainProgram.DeviceTask;
 class Device
 {
     protected string Name { get; set; }
-    protected string Characteristics { get; set; }
+    protected string Description { get; set; }
 
-    public Device(string name, string characteristics)
+    public Device(string name, string description)
     {
         this.Name = name;
-        this.Characteristics = characteristics;
+        this.Description = description;
     }
 
     public virtual void Sound()
@@ -25,70 +25,70 @@ class Device
 
     public virtual void Desc()
     {
-        Console.WriteLine($"Description: {Characteristics}");
+        Console.WriteLine($"Device Description: {Description}");
     }
 }
 
 class Kettle : Device
 {
-    public Kettle(string name, string characteristics) : base(name, characteristics)
+    public Kettle(string name, string description) : base(name, description)
     { }
 
     public override void Sound()
     {
-        Console.WriteLine("Kettle: *whistles*");
+        Console.WriteLine($"{Name}: *whistles*");
     }
 
     public override void Desc()
     {
-        Console.WriteLine($"Kettle description: {Characteristics}");
+        Console.WriteLine($"{Name} description: {Description}");
     }
 }
 
 class Microwave : Device
 {
-    public Microwave(string name, string characteristics) : base(name, characteristics)
+    public Microwave(string name, string description) : base(name, description)
     { }
 
     public override void Sound()
     {
-        Console.WriteLine("Microwave: *beep beep*");
+        Console.WriteLine($"{Name}: *beep beep*");
     }
 
     public override void Desc()
     {
-        Console.WriteLine($"Microwave description: {Characteristics}");
+        Console.WriteLine($"{Name} description: {Description}");
     }
 }
 
 class Car : Device
 {
-    public Car(string name, string characteristics) : base(name, characteristics)
+    public Car(string name, string description) : base(name, description)
     { }
 
     public override void Sound()
     {
-        Console.WriteLine("Car: *vroom vroom*");
+        Console.WriteLine($"{Name}: *vroom vroom*");
     }
 
     public override void Desc()
     {
-        Console.WriteLine($"Car description: {Characteristics}");
+        Console.WriteLine($"{Name} description: {Description}");
     }
 }
 
 class Streamship : Device
 {
-    public Streamship(string name, string characteristics) : base(name, characteristics)
+    public Streamship(string name, string description) : base(name, description)
     { }
 
     public override void Sound()
     {
-        Console.WriteLine("Steamship: *horn blows*");
+        Console.WriteLine($"{Name}: *horn blows*");
     }
 
     public override void Desc()
     {
-        Console.WriteLine($"Steamship description: {Characteristics}");
+        Console.WriteLine($"{Name} description: {Description}");
     }
 }

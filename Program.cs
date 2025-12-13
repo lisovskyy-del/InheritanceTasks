@@ -26,6 +26,10 @@ class Program
                 {
                     MoneyTask.Menu.Run();
                 }
+                else if (userChoice == 2)
+                {
+                    DeviceTask.Menu.Run();
+                }
                 else
                 {
                     Console.WriteLine("\nInvalid choice! Enter a number between 0-6!");
