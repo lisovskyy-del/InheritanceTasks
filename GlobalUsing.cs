@@ -4,3 +4,4 @@ global using MainProgram.DeviceTask;
 global using MainProgram.InstrumentTask;
 global using MainProgram.WorkerTask;
 global using MainProgram.CourseTask;
+global using MainProgram.ProductTask;

@@ -14,6 +14,7 @@ class Program
             Console.WriteLine("3. Musical Instrument");
             Console.WriteLine("4. Workers");
             Console.WriteLine("5. Courses");
+            Console.WriteLine("6. Product");
             Console.WriteLine("0. Exit");
             Console.Write("Your choice: ");
             string? input = Console.ReadLine();
@@ -44,6 +45,10 @@ class Program
                 else if (userChoice == 5)
                 {
                     CourseTask.Menu.Run();
+                }
+                else if (userChoice == 6)
+                {
+                    ProductTask.Menu.Run();
                 }
                 else
                 {
